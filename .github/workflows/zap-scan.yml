@@ -1,0 +1,17 @@
+name: ZAP-Test-3
+
+on:
+  push: 
+    branches: [ main ]
+
+jobs: 
+  build: 
+    runs-on: ubuntu-22.04
+    steps: 
+      - uses: actions/checkout@v2
+      - name: docker compose
+        run: docker-compose up --build --detach
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.8.0
+        with:
+          target: 'https://pasarro.com/'
