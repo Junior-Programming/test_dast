@@ -1,4 +1,4 @@
-name: ZAP-Test-7
+name: ZAP-Test-8
 
 on:
   push: 
@@ -14,4 +14,4 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.8.0
         with:
-          target: 'https://pasarro.com/'
+          target: 'https://business.tiktok.com/'
